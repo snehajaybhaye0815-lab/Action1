@@ -1,0 +1,20 @@
+name: Push Trigger Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Success Message
+        run: echo "Code pushed successfully to the main branch!"
+
+      - name: Display Current Date and Time
+        run: date
+
+      - name: Display Current Working Directory
+        run: pwd
